@@ -3,11 +3,22 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import NavBar from "./components/NavBar";
+import Content from "./page/Content";
+import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
   return (
     <div>
       <NavBar />
+      <Container fluid>
+        <Row className="mt-4 d-flex justify-center align-items-center">
+          <Col md={3}>Sidebar</Col>
+          <Col md={5}>
+            <Content />
+          </Col>
+          <Col md={1}>Social</Col>
+        </Row>
+      </Container>
     </div>
   );
 }

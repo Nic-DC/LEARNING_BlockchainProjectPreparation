@@ -37,6 +37,13 @@
   }
 } */
 
+body {
+  background-image: url("../public/bg.png");
+}
+#appLogo {
+  font-size: 2rem;
+}
+
 #darkmodeBtn,
 #lightmodeBtn,
 #searchBtn {
