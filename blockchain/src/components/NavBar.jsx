@@ -1,8 +1,13 @@
-import { Navbar, NavDropdown, Nav, Form, FormControl, Button } from "react-bootstrap";
-
+import { Navbar, NavDropdown, Nav, Form, FormControl, Button, Badge } from "react-bootstrap";
+import { GiMoonClaws } from "react-icons/gi";
+import { BsSunglasses } from "react-icons/bs";
+import { GoTelescope } from "react-icons/go";
+import { useState } from "react";
 const NavBar = () => {
+  const [toggleMode, setToggleMode] = useState("light");
+
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg={toggleMode} expand="lg">
       <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -18,9 +23,25 @@ const NavBar = () => {
           </NavDropdown>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-dark" className="mr-sm-2">
+            <GoTelescope id="searchBtn" />
+          </Button>
+          <FormControl type="text" placeholder="Search" />
         </Form>
+        <Button
+          variant="dark"
+          className="ml-3 d-flex justify-center"
+          onClick={() => toggleMode === "light" && setToggleMode("dark")}
+        >
+          Night <GiMoonClaws id="darkmodeBtn" className="ml-2" />
+        </Button>
+        <Button
+          variant="outline-dark"
+          className="ml-3 d-flex justify-center"
+          onClick={() => toggleMode === "dark" && setToggleMode("light")}
+        >
+          Day <BsSunglasses id="lightmodeBtn" className="ml-2" />
+        </Button>
       </Navbar.Collapse>
     </Navbar>
   );
