@@ -1,6 +1,6 @@
 import { Tab, Row, Col, ListGroup } from "react-bootstrap";
 
-const Content = () => {
+const Sidebar = () => {
   return (
     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
       <Row>
@@ -32,4 +32,4 @@ const Content = () => {
     </Tab.Container>
   );
 };
-export default Content;
+export default Sidebar;
