@@ -52,7 +52,7 @@ body {
 
 /* SIDEBAR */
 .sidebar-btn {
-  width: 75%;
+  width: 100%;
 }
 
 #newPlannerIcon {
@@ -61,8 +61,26 @@ body {
 }
 
 #newPlannerIcon:hover {
-  /* color: bisque; */
   transform: scale(1.15);
+}
+
+#sidebarList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebarItem {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 350ms ease-out;
+}
+
+.sidebarItem:hover {
+  transform: scale(1.05);
+}
+
+.sidebarBadge {
+  padding: 1.5rem;
 }
 
 /* SOCIAL */
