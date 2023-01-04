@@ -8,7 +8,7 @@ const PlannerList = ({ plannersList }) => {
       {console.log("plannersList", plannersList)}
       {plannersList ? (
         plannersList.map((planner) => (
-          <li className="sidebarItem d-flex mt-2" key={planner._id}>
+          <li className="sidebarItem d-flex mt-3" key={planner._id}>
             <PlannerItem planner={planner} />
           </li>
         ))

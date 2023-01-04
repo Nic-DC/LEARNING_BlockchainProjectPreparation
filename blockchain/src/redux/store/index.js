@@ -1,7 +1,7 @@
 import { configureStore, combineReducers, getDefaultMiddleware } from "@reduxjs/toolkit";
 // import utilsReducer from "../reducers/utilsReducer";
-import plannerReducer from "./reducers/plannerReducer";
-import taskReducer from "./reducers/plannerReducer";
+import plannerReducer from "../reducers/plannerReducer";
+import taskReducer from "../reducers/taskReducer";
 
 import localStorage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
@@ -11,11 +11,11 @@ import { encryptTransform } from "redux-persist-transform-encrypt";
 const persistConfig = {
   key: "root",
   storage: localStorage,
-  transforms: [
-    encryptTransform({
-      secretKey: process.env.REACT_APP_SECRET_KEY,
-    }),
-  ],
+  // transforms: [
+  //   encryptTransform({
+  //     secretKey: process.env.REACT_APP_SECRET_KEY,
+  //   }),
+  // ],
 };
 
 const mainReducer = combineReducers({

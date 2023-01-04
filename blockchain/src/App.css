@@ -71,18 +71,39 @@ body {
 
 .sidebarItem {
   font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 350ms ease-out;
+  /* cursor: pointer;
+  transition: transform 350ms ease-out; */
 }
-
 .sidebarItem:hover {
-  transform: scale(1.05);
+  background-color: lightgray;
 }
 
 .sidebarBadge {
   padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 350ms ease-out;
 }
 
+.sidebarTrash {
+  cursor: pointer;
+  transition: transform 350ms ease-out;
+}
+
+.sidebarBadge:hover {
+  transform: scale(1.05);
+  /* padding: 0.5rem; */
+}
+
+.sidebarTrash:hover {
+  transform: scale(1.35);
+}
+
+#plannerItemDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /* SOCIAL */
 .social-icons {
   font-size: 1.5rem;
