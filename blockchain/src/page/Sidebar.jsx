@@ -1,33 +1,22 @@
-import { Tab, Row, Col, ListGroup } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Badge } from "react-bootstrap";
+import { AiOutlinePlus } from "react-icons/ai";
+import NewPlannerModal from "../components/NewPlannerModal";
 
 const Sidebar = () => {
+  const [toggle, setToggle] = useState(false);
+  const toggleModal = () => setToggle(!toggle);
+
   return (
-    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-      <Row>
-        <Col>
-          <ListGroup>
-            <ListGroup.Item action href="#link1">
-              Lorem ipsum, dolor sit amet
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link2">
-              Link 2
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link3">
-              Link 3
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link4">
-              Link 4
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link5">
-              Link 5
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link6">
-              Link 6
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-      </Row>
-    </Tab.Container>
+    <div>
+      <Button variant="outline-dark" className="sidebar-btn" onClick={toggleModal}>
+        New Planner{" "}
+        <Badge variant="light">
+          <AiOutlinePlus id="newPlannerIcon" />
+        </Badge>
+      </Button>
+      <NewPlannerModal showModal={toggle} handleClose={toggleModal} />
+    </div>
   );
 };
 export default Sidebar;
