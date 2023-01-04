@@ -17,7 +17,7 @@ function App() {
           <Col md={2}>
             <Sidebar />
           </Col>
-          <Col md={4}>
+          <Col md={5}>
             <Content />
           </Col>
           <Col md={1} className="align-self-center">

@@ -7,9 +7,7 @@ const Sidebar = () => {
         <Col>
           <ListGroup>
             <ListGroup.Item action href="#link1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, mollitia? Similique omnis odit expedita hic
-              tempora quas porro blanditiis iusto ipsam laborum ab est distinctio, commodi ducimus veniam! Eligendi,
-              autem.
+              Lorem ipsum, dolor sit amet
             </ListGroup.Item>
             <ListGroup.Item action href="#link2">
               Link 2
