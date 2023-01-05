@@ -5,17 +5,17 @@ import DeletePlannerItem from "./DeletePlannerItem";
 import EditPlannerItem from "./EditPlannerItem";
 import { selectPlanner } from "../redux/actions";
 
-const PlannerItem = ({ planner }) => {
+const PlannerItem = ({ planner, getPlanners }) => {
   const dispatch = useDispatch();
 
   return (
     <div id="plannerItemDiv">
-      <Badge variant="dark" className="sidebarBadge" onClick={() => dispatch(selectPlanner(planner))}>
+      <Badge variant="dark" className="sidebarBadge line-clamp" onClick={() => dispatch(selectPlanner(planner))}>
         {planner.name}
       </Badge>
       <Badge>
-        <EditPlannerItem />
-        <DeletePlannerItem />
+        <EditPlannerItem getPlanners={getPlanners} />
+        <DeletePlannerItem getPlanners={getPlanners} />
       </Badge>
     </div>
   );

@@ -37,6 +37,6 @@ const Content = () => {
     getTasks();
   }, [selectedPlannerID]);
 
-  return <div>{<TasksList tasks={tasks} getTasks={getTasks} />}</div>;
+  return <div>{selectedPlannerID && <TasksList tasks={tasks} getTasks={getTasks} />}</div>;
 };
 export default Content;

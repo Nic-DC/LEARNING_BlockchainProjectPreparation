@@ -91,7 +91,6 @@ const NewTaskModal = ({ getTasks }) => {
               categoryChange={handleChangeCategory}
               content={content}
               contentChange={handleChangeContent}
-              resetStates={resetInputContent}
             />
 
             <Button variant="outline-dark" onClick={handleClose} type="submit">

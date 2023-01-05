@@ -1,10 +1,12 @@
 import { Badge } from "react-bootstrap";
-import { FcEditImage } from "react-icons/fc";
+// import { FcEditImage } from "react-icons/fc";
+import { GrEdit } from "react-icons/gr";
 
 const EditPlannerItem = () => {
   return (
-    <Badge>
-      <FcEditImage className="sidebarEdit " />
+    <Badge onClick={() => console.log("badge clicked")}>
+      {/* <FcEditImage className="sidebarEdit " /> */}
+      <GrEdit className="sidebarEdit " />
     </Badge>
   );
 };
