@@ -1,6 +1,6 @@
-import { MdOutlineAddTask } from "react-icons/md";
-import { Button, Badge } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import NewTaskModal from "./NewTaskModal";
 
 const TaskListHeader = ({ tasks }) => {
   const selectedPlanner = useSelector((store) => store.planner.selectedPlanner);
@@ -17,10 +17,7 @@ const TaskListHeader = ({ tasks }) => {
         <Badge variant="warning">{selectedPlanner.name}</Badge>
       </div>
 
-      <Button variant="outline-warning">
-        <span className="text-dark mr-2">New Task</span>
-        <MdOutlineAddTask id="addTaskIcon" />
-      </Button>
+      <NewTaskModal />
     </div>
   );
 };

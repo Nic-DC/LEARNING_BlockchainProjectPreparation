@@ -4,8 +4,10 @@ const TaskItem = ({ task }) => {
   console.log("the task, in TaskItem, is: ", task);
   return (
     <div>
-      <Badge>{task.name}</Badge>
-      <p>{task.content}</p>
+      <Badge variant="outline-dark">{task.name}</Badge>
+      <div>
+        <span>{task.content}</span> <span>{task.done}</span>
+      </div>
     </div>
   );
 };
