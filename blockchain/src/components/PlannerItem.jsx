@@ -1,15 +1,13 @@
 import { Badge } from "react-bootstrap";
-import { FcEmptyTrash } from "react-icons/fc";
-import { FaTrash } from "react-icons/fa";
+import DeletePlannerItem from "./DeletePlannerItem";
 
-const PlannerItem = ({ planner }) => {
+const PlannerItem = ({ planner, getPlanners }) => {
   return (
     <div id="plannerItemDiv">
       <Badge variant="dark" className="sidebarBadge">
         {planner.name}
       </Badge>
-      <FcEmptyTrash className="sidebarTrash" />
-      {/* <FaTrash /> */}
+      <DeletePlannerItem getUpdatedPlannersList={getPlanners} />
     </div>
   );
 };

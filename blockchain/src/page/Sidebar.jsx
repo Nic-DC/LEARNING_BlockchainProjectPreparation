@@ -41,7 +41,7 @@ const Sidebar = () => {
       </Button>
       <NewPlannerModal showModal={toggle} handleClose={toggleModal} getPlanners={fetchPlanners} />
 
-      <PlannerList plannersList={plannersList} />
+      <PlannerList plannersList={plannersList} getPlanners={fetchPlanners} />
     </div>
   );
 };

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Badge } from "react-bootstrap";
 import PlannerItem from "./PlannerItem";
 
-const PlannerList = ({ plannersList }) => {
+const PlannerList = ({ plannersList, getPlanners }) => {
   return (
     <ul id="sidebarList" className="">
       {console.log("plannersList", plannersList)}
       {plannersList ? (
         plannersList.map((planner) => (
           <li className="sidebarItem d-flex mt-3" key={planner._id}>
-            <PlannerItem planner={planner} />
+            <PlannerItem planner={planner} getPlanners={getPlanners} />
           </li>
         ))
       ) : (

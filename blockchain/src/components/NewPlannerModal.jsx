@@ -7,9 +7,9 @@ const NewPlannerModal = ({ showModal, handleClose, getPlanners }) => {
 
   console.log("the name is: ", name);
 
-  //   const clearPlannerName = () => {
-  //     setName("");
-  //   };
+  const clearPlannerName = () => {
+    setName("");
+  };
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -33,7 +33,7 @@ const NewPlannerModal = ({ showModal, handleClose, getPlanners }) => {
     if (res.ok) {
       const data = await res.json();
       console.log("data is: ", data);
-      //   clearPlannerName();
+      clearPlannerName();
       getPlanners();
     }
   };
