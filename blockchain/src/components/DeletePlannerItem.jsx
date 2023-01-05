@@ -1,7 +1,7 @@
 import { Badge } from "react-bootstrap";
 import { FcEmptyTrash } from "react-icons/fc";
 
-const DeletePlannerItem = ({ getUpdatedPlannersList }) => {
+const DeletePlannerItem = () => {
   return (
     <Badge>
       <FcEmptyTrash className="sidebarTrash" />
