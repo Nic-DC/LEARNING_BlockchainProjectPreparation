@@ -1,10 +1,10 @@
 import TaskItem from "./TaskItem";
 import TaskListHeader from "./TaskListHeader";
 
-const TasksList = ({ tasks }) => {
+const TasksList = ({ tasks, getTasks }) => {
   return (
     <>
-      <TaskListHeader tasks={tasks} />
+      <TaskListHeader tasks={tasks} getTasks={getTasks} />
       <ul id="contentList">
         {tasks.length > 0 ? (
           tasks.map((task) => (

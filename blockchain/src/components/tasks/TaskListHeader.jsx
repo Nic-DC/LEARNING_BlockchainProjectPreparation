@@ -2,7 +2,7 @@ import { Badge } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import NewTaskModal from "./NewTaskModal";
 
-const TaskListHeader = ({ tasks }) => {
+const TaskListHeader = ({ tasks, getTasks }) => {
   const selectedPlanner = useSelector((store) => store.planner.selectedPlanner);
   const selectedPlannerID = useSelector((store) => store.planner.selectedPlanner._id);
   const passedTask = tasks.find((task) => task.plannerId === selectedPlannerID);
@@ -17,7 +17,7 @@ const TaskListHeader = ({ tasks }) => {
         <Badge variant="warning">{selectedPlanner.name}</Badge>
       </div>
 
-      <NewTaskModal />
+      <NewTaskModal getTasks={getTasks} />
     </div>
   );
 };
