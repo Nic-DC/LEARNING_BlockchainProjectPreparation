@@ -16,8 +16,8 @@ const TasksList = ({ tasks, getTasks }) => {
         <Row className="mt-4 d-flex justify-content-between">
           {tasks.length > 0 ? (
             tasks.map((task) => (
-              <Col md={5} key={task._id} className="px-0">
-                <TaskItem task={task} />
+              <Col md={6} key={task._id} className="px-0">
+                <TaskItem task={task} getTasks={getTasks} />
               </Col>
             ))
           ) : (

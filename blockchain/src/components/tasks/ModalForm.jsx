@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { Form } from "react-bootstrap";
 
-const ModalForm = ({ name, nameChange, category, categoryChange, content, contentChange, resetStates }) => {
+const ModalForm = ({ name, nameChange, category, categoryChange, content, contentChange }) => {
   return (
     <>
       <Form.Group controlId="exampleForm.ControlSelect1">
