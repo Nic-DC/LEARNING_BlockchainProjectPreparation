@@ -3,6 +3,7 @@ import { Card, Badge, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { selectTask } from "../../redux/actions";
 
+import DeleteTaskModal from "./DeleteTaskModal";
 import EditTaskModal from "./EditTaskModal";
 
 const TaskItem = ({ task, getTasks }) => {
@@ -12,9 +13,13 @@ const TaskItem = ({ task, getTasks }) => {
 
   // MODAL functions and variables
   const [show, setShow] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+
+  const handleShowDelete = () => setShowDelete(true);
+  const handleCloseDelete = () => setShowDelete(false);
 
   return (
     <Card>
@@ -40,15 +45,12 @@ const TaskItem = ({ task, getTasks }) => {
         <EditTaskModal show={show} handleClose={handleClose} getTasks={getTasks} />
 
         {/* DELETE task */}
-        <Button variant="outline-danger">Delete Task</Button>
+        <Button variant="outline-danger" onClick={handleShowDelete}>
+          Delete Task
+        </Button>
+        <DeleteTaskModal show={showDelete} handleClose={handleCloseDelete} getTasks={getTasks} />
       </Card.Body>
     </Card>
-    // <div className="mb-2">
-    //   <Badge variant="">{task.name}</Badge>
-    //   <div>
-    //     <span>{task.content}</span> <span>{task.category}</span>
-    //   </div>
-    // </div>
   );
 };
 export default TaskItem;

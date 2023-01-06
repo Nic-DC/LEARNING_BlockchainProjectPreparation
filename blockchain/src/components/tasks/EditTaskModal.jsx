@@ -71,7 +71,7 @@ const EditTaskModal = ({ show, handleClose, getTasks }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Title>Edit Task</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={(e) => handleSubmit(e)}>
