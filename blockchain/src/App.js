@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavBar from "./components/NavBar";
+import NavBar from "./components/+++structural/NavBar";
 import Content from "./page/Content";
 import Sidebar from "./page/Sidebar";
 import Social from "./page/Social";

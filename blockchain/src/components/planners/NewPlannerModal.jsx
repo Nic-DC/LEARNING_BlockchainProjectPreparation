@@ -1,6 +1,5 @@
 import { Modal, Button, Form } from "react-bootstrap";
 import { useState } from "react";
-import { useSelector } from "react-redux";
 
 const NewPlannerModal = ({ showModal, handleClose, getPlanners }) => {
   const [name, setName] = useState("");
