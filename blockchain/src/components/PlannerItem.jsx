@@ -13,7 +13,7 @@ const PlannerItem = ({ planner, getPlanners }) => {
       <Badge variant="dark" className="sidebarBadge line-clamp" onClick={() => dispatch(selectPlanner(planner))}>
         {planner.name}
       </Badge>
-      <Badge>
+      <Badge className="px-0">
         <EditPlannerItem getPlanners={getPlanners} />
         <DeletePlannerItem getPlanners={getPlanners} />
       </Badge>

@@ -29,9 +29,9 @@ const DeletePlannerItem = ({ getPlanners }) => {
   };
 
   return (
-    <Badge>
+    <Badge className="pr-0">
       {/* <FcEmptyTrash className="sidebarTrash" /> */}
-      <GrTrash className="sidebarTrash" onClick={() => deletePlanner()} />
+      <GrTrash id="sidebarTrashIcon" className="sidebarTrash" onClick={() => deletePlanner()} />
     </Badge>
   );
 };

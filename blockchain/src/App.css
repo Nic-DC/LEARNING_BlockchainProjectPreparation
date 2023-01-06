@@ -51,6 +51,12 @@ body {
 }
 
 /* SIDEBAR */
+#sidebarDIV {
+  background-color: RGBA(0, 27, 59, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 6px;
+}
+
 .sidebar-btn {
   width: 100%;
 }
@@ -75,13 +81,17 @@ body {
   transition: transform 350ms ease-out; */
 }
 .sidebarItem:hover {
-  background-color: lightgray;
+  background-color: RGBA(0, 27, 59, 0.6);
 }
 
 .sidebarBadge {
   padding: 1.5rem;
   cursor: pointer;
   transition: transform 350ms ease-out;
+}
+
+#sidebarTrashIcon {
+  color: aliceblue;
 }
 
 .sidebarTrash,
@@ -117,6 +127,11 @@ body {
   align-items: center;
 }
 /* CONTENT */
+#contentDIV {
+  background-color: RGBA(255, 228, 196, 0.8);
+  padding: 1rem;
+  border-radius: 6px;
+}
 #contentList {
   list-style: none;
   padding-left: 0;

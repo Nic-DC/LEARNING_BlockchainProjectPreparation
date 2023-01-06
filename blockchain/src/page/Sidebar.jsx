@@ -32,8 +32,8 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <div>
-      <Button variant="outline-dark" className="sidebar-btn" onClick={toggleModal}>
+    <div id="sidebarDIV">
+      <Button variant="outline-light" className="sidebar-btn" onClick={toggleModal}>
         New Planner{" "}
         <Badge variant="light">
           <AiOutlinePlus id="newPlannerIcon" />
