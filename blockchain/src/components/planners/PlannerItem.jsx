@@ -1,9 +1,14 @@
-import { useState } from "react";
+/* 
+2 components from the "planners" folder:
+  1. EditPlannerItem
+  2. DeletePlannerItem
+*/
+
 import { Badge } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import DeletePlannerItem from "./DeletePlannerItem";
-import EditPlannerItem from "./EditPlannerItem";
-import { selectPlanner } from "../redux/actions";
+import { useDispatch } from "react-redux";
+import DeletePlannerItem from "../planners/DeletePlannerItem";
+import EditPlannerItem from "../planners/EditPlannerItem";
+import { selectPlanner } from "../../redux/actions";
 
 const PlannerItem = ({ planner, getPlanners }) => {
   const dispatch = useDispatch();
@@ -14,6 +19,11 @@ const PlannerItem = ({ planner, getPlanners }) => {
         {planner.name}
       </Badge>
       <Badge className="px-0">
+        {/* 
+        2 components from the "planners" folder:
+          1. EditPlannerItem
+          2. DeletePlannerItem
+        */}
         <EditPlannerItem getPlanners={getPlanners} />
         <DeletePlannerItem getPlanners={getPlanners} />
       </Badge>

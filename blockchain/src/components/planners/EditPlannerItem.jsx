@@ -1,9 +1,13 @@
+/* 
+1 component from the "planners" folder: EditPlannerModal
+*/
+
 import { useState } from "react";
 import { Badge } from "react-bootstrap";
 // import { FcEditImage } from "react-icons/fc";
 import { GrEdit } from "react-icons/gr";
 
-import EditPlannerModal from "./EditPlannerModal";
+import EditPlannerModal from "../planners/EditPlannerModal";
 
 const EditPlannerItem = ({ getPlanners }) => {
   // MODAL functions and variables:

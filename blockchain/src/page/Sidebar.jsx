@@ -1,9 +1,15 @@
+/* 
+2 components from the "planners" folder 
+  1. NewPlannerModal
+  2. PlannerList
+*/
+
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Badge } from "react-bootstrap";
 import { AiOutlinePlus } from "react-icons/ai";
-import NewPlannerModal from "../components/NewPlannerModal";
-import PlannerList from "../components/PlannerList";
+import NewPlannerModal from "../components/planners/NewPlannerModal";
+import PlannerList from "../components/planners/PlannerList";
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
@@ -39,8 +45,13 @@ const Sidebar = () => {
           <AiOutlinePlus id="newPlannerIcon" />
         </Badge>
       </Button>
-      <NewPlannerModal showModal={toggle} handleClose={toggleModal} getPlanners={fetchPlanners} />
 
+      {/* 
+      2 components from the "planners" folder 
+        1. NewPlannerModal
+        2. PlannerList
+      */}
+      <NewPlannerModal showModal={toggle} handleClose={toggleModal} getPlanners={fetchPlanners} />
       <PlannerList plannersList={plannersList} getPlanners={fetchPlanners} />
     </div>
   );

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Tab, Row, Col, ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import TasksList from "../components/tasks/TasksList";
 
@@ -37,6 +36,7 @@ const Content = () => {
     getTasks();
   }, [selectedPlannerID]);
 
+  // 1 component from the "tasks" folder
   return <div id="contentDIV">{selectedPlannerID && <TasksList tasks={tasks} getTasks={getTasks} />}</div>;
 };
 export default Content;

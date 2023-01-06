@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+/*  
+1 component from the "planners" folder : PlannerItem
+*/
+
 import { Badge } from "react-bootstrap";
 import PlannerItem from "./PlannerItem";
 
